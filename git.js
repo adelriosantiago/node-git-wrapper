@@ -29,7 +29,7 @@ Git.prototype.exec = function (command, options, args, callback) {
   var cmdArgs = this.args
       .concat(command)
       .concat(Git.optionsToArray(options))
-      .concat(args);
+      .concat(Git.optionsToArray(args));
 
   this.spawnCommand(this.binary, cmdArgs, callback);
 };
