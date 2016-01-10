@@ -1,7 +1,7 @@
 git-wrapper
 ===========
 
-a wrapper around the git executable
+A wrapper around the git executable
 
 ## Installation
 
@@ -9,12 +9,14 @@ a wrapper around the git executable
 
 ## API
 
+
+### var Git = require("git-wrapper");
 ### var git = new Git(options);
 
 Constructor. See [git(1)](http://git-scm.com/docs/git) for available options.
 
-  * `options` Object. Examples: `{ paginate: true }` enables pagination.
-    `{ 'git-dir': '../.git' }` specifies a different `.git` directory.
+  * `options` Object. Examples: `{ paginate: true }` enables pagination. `{ 'C': '../repo' }` specifies a different `.git` directory.
+    `{ 'git-dir': '../repo/.git' }` specifies a different `.git` file for the current directory.
 
 ### git.exec(command [[, options], args], callback);
 
