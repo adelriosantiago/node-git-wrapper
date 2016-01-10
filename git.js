@@ -83,7 +83,8 @@ Git.optionsToArray = function (options) {
         args.push('-'+k);
       // if val is not false, add '-k val'
       else if (val !== false)
-        args.push('-'+k+' '+val);
+        args.push('-'+k);
+        args.push(val);
     } else {
       if (val === true)
         args.push('--'+k);
